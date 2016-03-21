@@ -1,0 +1,54 @@
+$bg-color: #ffffff;
+$txt-color: red;
+
+html{
+  background: $bg-color;
+  color: $txt-color;
+}
+.block{
+  font-size: 35px;
+  font-weight: 600;
+  font-family: Futura;
+  color: black;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+@mixin rotate($angle, $translateX, $translateY){
+  font-family: Helvetica;
+  width: 450px;
+  font-size: 30px;
+  transform: translate($translateX, $translateY) rotate($angle);
+  border-bottom: 10px solid black; 
+  padding-bottom: 30px;
+  text-align: left;
+}
+
+.rotate-over{ @include rotate(76deg, 600px, -26px) }
+.rotate-under{ @include rotate(76deg, 640px, 50px) }
+
+.middle-text{
+  position: relative;;
+  width: 90vw;
+  right: auto;
+  font-size: 180px;
+  font-family: Futura;
+  color: $txt-color;
+  font-variant: small-caps;
+  z-index: -1;
+  font-weight: 600;
+  overflow: hidden;
+  background-color: transparent;
+  margin-top: 8%;
+  transform: rotate(-14deg);
+  margin-left: 3%;    
+}
+
+// .under{
+//   width: 100%;
+//   left: -3%;
+//   margin-top: -60px;
+//   background-color: $bg-color;
+//   height: 100px;
+//   position: relative;
+// }
